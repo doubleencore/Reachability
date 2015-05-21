@@ -382,7 +382,7 @@ static void TMReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRea
 
 #pragma mark - reachability status stuff
 
--(NetworkStatus)currentReachabilityStatus
+-(POMNetworkStatus)currentReachabilityStatus
 {
     if([self isReachable])
     {
@@ -411,7 +411,7 @@ static void TMReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRea
 
 -(NSString*)currentReachabilityString
 {
-	NetworkStatus temp = [self currentReachabilityStatus];
+	POMNetworkStatus temp = [self currentReachabilityStatus];
 	
 	if(temp == ReachableViaWWAN)
 	{

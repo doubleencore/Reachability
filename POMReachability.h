@@ -40,7 +40,7 @@
 
 extern NSString *const kReachabilityChangedNotification;
 
-typedef NS_ENUM(NSInteger, NetworkStatus) {
+typedef NS_ENUM(NSInteger, POMNetworkStatus) {
     // Apple NetworkStatus Compatible Names.
     NotReachable = 0,
     ReachableViaWiFi = 2,
@@ -87,7 +87,7 @@ typedef void (^NetworkUnreachable)(POMReachability * reachability);
 // Is user intervention required?
 -(BOOL)isInterventionRequired;
 
--(NetworkStatus)currentReachabilityStatus;
+-(POMNetworkStatus)currentReachabilityStatus;
 -(SCNetworkReachabilityFlags)reachabilityFlags;
 -(NSString*)currentReachabilityString;
 -(NSString*)currentReachabilityFlags;
